@@ -188,4 +188,7 @@ spec:
       - name: docker-socket-mount
         hostPath:
           path: {{ .Values.dockerSock.path }}
+      - name: aqua-web-pvc
+        persistentVolumeClaim:
+          claimName: aqua-web-pvc
       {{- end }}
